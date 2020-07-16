@@ -1,0 +1,45 @@
+---
+disk: sda
+helper:
+  name: "helper"
+  ipaddr: "192.168.8.88"
+  networkinterfacename: "ens192"
+dns:
+  domain: "beu.local"
+  clusterid: "ocp4"
+  forwarder1: "8.8.8.8"
+  forwarder2: "8.8.4.4"
+dhcp:
+  router: "192.168.8.1"
+  bcast: "192.168.8.255"
+  netmask: "255.255.255.0"
+  poolstart: "192.168.8.150"
+  poolend: "192.168.8.190"
+  ipid: "192.168.8.0"
+  netmaskid: "255.255.255.0"
+bootstrap:
+  name: "bootstrap"
+  ipaddr: "192.168.8.219"
+  macaddr: "52:54:00:60:72:67"
+masters:
+  - name: "master0"
+    ipaddr: "192.168.8.210"
+    macaddr: "52:54:00:e7:9d:67"
+  - name: "master1"
+    ipaddr: "192.168.8.211"
+    macaddr: "52:54:00:80:16:23"
+  - name: "master2"
+    ipaddr: "192.168.8.213"
+    macaddr: "52:54:00:d5:1c:39"
+workers:
+  - name: "worker0"
+    ipaddr: "192.168.8.200"
+    macaddr: "a8:5e:45:3d:2f:99"
+  - name: "worker1"
+    ipaddr: "192.168.8.224"
+    macaddr: "00:10:18:4f:97:c0"
+ocp_bios: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.2/4.2.18/rhcos-4.2.18-x86_64-metal-bios.raw.gz"
+ocp_initramfs: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.2/4.2.18/rhcos-4.2.18-x86_64-installer-initramfs.img"
+ocp_install_kernel: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.2/4.2.18/rhcos-4.2.18-x86_64-installer-kernel"
+ocp_client: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.2.36/openshift-client-linux.tar.gz"
+ocp_installer: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.2.36/openshift-install-linux-4.2.36.tar.gz"
